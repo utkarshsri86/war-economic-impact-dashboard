@@ -66,8 +66,10 @@ df['Informal_Economy_Increase'] = df['Informal_Economy_Size_During_War_%'] - df[
 
 
 # ── SIDEBAR ──────────────────────────────────────────────────────────
-st.sidebar.image("https://img.icons8.com/color/96/null/peace-dove.png", width=80)
-st.sidebar.title("⚔️ War Economic Dashboard")
+st.sidebar.markdown("""
+<div style='text-align:center; font-size: 48px; padding: 10px 0'>🕊️</div>
+<h2 style='text-align:center; color:#e63946;'>War Economic<br>Dashboard</h2>
+""", unsafe_allow_html=True)
 st.sidebar.markdown("---")
 
 st.sidebar.header("🔍 Filter Data")
@@ -356,7 +358,7 @@ with tab4:
         status_sel        = st.selectbox("Status",        sorted(df['Status'].unique()))
         bm_level_sel      = st.selectbox("Black Market Level", sorted(df['Black_Market_Activity_Level'].unique()))
         sector_sel        = st.selectbox("Most Affected Sector", sorted(df['Most_Affected_Sector'].unique()))
-        profiteering_sel  = st.selectbox("War Profiteering", sorted(df['War_Profiteering_Documented'].unique()))
+        profiteering_sel  = st.selectbox("Was War Profiteering Documented? (Yes/No)", sorted(df['War_Profiteering_Documented'].unique()))
 
     st.markdown("---")
 
