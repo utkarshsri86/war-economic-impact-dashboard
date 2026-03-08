@@ -353,12 +353,12 @@ with tab4:
     with col3:
         st.markdown("**🌍 Conflict Profile**")
         bm_gap            = st.slider("Black Market Rate Gap %",     0, 500,  100)
-        region_sel        = st.selectbox("Region",        sorted(df['Region'].unique()))
-        conflict_sel      = st.selectbox("Conflict Type", sorted(df['Conflict_Type'].unique()))
-        status_sel        = st.selectbox("Status",        sorted(df['Status'].unique()))
-        bm_level_sel      = st.selectbox("Black Market Level", sorted(df['Black_Market_Activity_Level'].unique()))
-        sector_sel        = st.selectbox("Most Affected Sector", sorted(df['Most_Affected_Sector'].unique()))
-        profiteering_sel  = st.selectbox("Was War Profiteering Documented? (Yes/No)", sorted(df['War_Profiteering_Documented'].unique()))
+        region_sel        = st.selectbox("🌍 Region", sorted(df["Region"].unique()))
+        conflict_sel      = st.selectbox("⚔️ Conflict Type", sorted(df["Conflict_Type"].unique()))
+        status_sel        = st.selectbox("📌 Conflict Status", sorted(df["Status"].unique()))
+        bm_level_sel      = st.selectbox("🕵️ Black Market Level", sorted(df["Black_Market_Activity_Level"].unique()))
+        sector_sel        = st.selectbox("🏭 Most Affected Sector", sorted(df["Most_Affected_Sector"].unique()))
+        profiteering_sel  = st.selectbox("💰 War Profiteering Documented? (Yes / No)", sorted(df["War_Profiteering_Documented"].unique()))
 
     st.markdown("---")
 
